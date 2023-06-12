@@ -1,0 +1,26 @@
+.card-p {
+  max-width: 500px;
+
+  box-shadow: 0px 6px 10px -1px rgba(18, 18, 18, 0.75);
+
+}
+
+
+.text{
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.colorB{
+  background: rgb(82,113,255);
+  background: linear-gradient(90deg, rgba(82,113,255,1) 0%, rgba(143,60,242,1) 100%, rgba(171,35,236,1) 100%);
+}
+
+.title1{
+  font-family: 'Galada', cursive;
+}
+
+
+.color{
+  background: rgb(82,113,255);
+  background: linear-gradient(90deg, rgba(82,113,255,1) 0%, rgba(143,60,242,1) 100%, rgba(171,35,236,1) 100%);
+}

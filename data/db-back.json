@@ -1,0 +1,12 @@
+{
+  "registro": [
+    {
+      "id": 2,
+      "asunto": "Prueba 1",
+      "autor": "Autor 1",
+      "descripcion": "Descripción 1",
+      "fecha": "Fecha 1",
+      "estado": "Estado 1"
+    }
+  ]
+}

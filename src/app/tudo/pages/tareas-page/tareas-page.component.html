@@ -1,0 +1,23 @@
+
+<h1 class="font-title">Listado de tareas <mat-icon>receipt_long</mat-icon></h1>
+
+<mat-divider></mat-divider>
+
+
+<div class="grid">
+
+  <div
+    *ngFor="let itemRegistro of registros"
+   class="mt-5 ml-3">
+    <!-- registros => equivale a la variable o el input que creamos en el componenente tudo-card -->
+    <!-- y le pasamos los datos atraves de itemRegistro -->
+    <tudo-card [registros]="itemRegistro"></tudo-card>
+  </div>
+
+
+
+
+
+
+
+</div>

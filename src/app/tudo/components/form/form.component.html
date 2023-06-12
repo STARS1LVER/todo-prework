@@ -1,0 +1,102 @@
+
+
+<mat-card class="mt-3 content" >
+  <mat-card-content class="flex flex-column justify-content-center align-items-center p-3">
+
+    <form class="p-1" [formGroup]="registroForm" (ngSubmit)="onSubmit()" >
+
+      <div class="flex">
+        <mat-form-field class="color">
+          <mat-label> Asunto </mat-label>
+          <input type="text"
+
+          matInput
+          required
+          formControlName="asunto">
+        </mat-form-field>
+
+        <mat-form-field  class="ml-4" >
+          <mat-label> Autor </mat-label>
+          <input type="text"
+          matInput
+          required
+          formControlName="autor">
+        </mat-form-field>
+
+      </div>
+
+      <mat-form-field [ngStyle]="{width:'500px'}">
+        <mat-label>Descripcion</mat-label>
+        <textarea matInput formControlName="descripcion"></textarea>
+      </mat-form-field>
+
+
+      <div class="flex flex-column justify-content-center align-items-center">
+
+        <div class="">
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Fecha Inicio</mat-label>
+            <input matInput formControlName="fechaInicio" [matDatepicker]="picker">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #picker></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width ml-3">
+            <mat-label>Fecha Final</mat-label>
+            <input matInput formControlName="fechaFinal" [matDatepicker]="picker2">
+            <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #picker2></mat-datepicker>
+          </mat-form-field>
+
+        </div>
+
+        <mat-form-field [ngStyle]="{width: '200px'}" class="">
+          <mat-label>Estado</mat-label>
+          <mat-select formControlName="estado">
+            <mat-option *ngFor="let state of estado" [value]="state.value">
+              {{state.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+
+
+
+
+    </form>
+
+    <div class="flex ">
+      <button
+      mat-raised-button
+      routerLink="todo/tareas"
+      class="colorB"
+      (click)="onSubmit()"
+      >
+      <mat-icon>save</mat-icon>
+        Guardar Tarea
+      </button>
+
+      <ng-template [ngIf]="obtenerRegistro.id">
+        <button
+        class="ml-5 colorB"
+        color="primary"
+        mat-raised-button
+        (click)="onConfirmDelete()">
+        <mat-icon >delete_forever</mat-icon>
+        Borrar</button>
+
+      </ng-template>
+
+    </div>
+
+
+  </mat-card-content>
+
+  <mat-card-footer>
+    <mat-progress-bar class="colorB" mode="query" value="2"></mat-progress-bar>
+  </mat-card-footer>
+
+
+</mat-card>

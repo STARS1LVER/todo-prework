@@ -1,0 +1,20 @@
+{
+  "registro": [
+    {
+      "id": 1,
+      "asunto": "Aprendiendo angular",
+      "autor": "STARSILVER",
+      "descripcion": "Angular es un popular framework de desarrollo de aplicaciones web creado por Google. Es una herramienta poderosa para construir aplicaciones web de una sola página (SPA) y aplicaciones web escalables y de alto rendimiento.",
+      "fecha": "2023-06-13T05:00:00.000Z",
+      "estado": "01-creado"
+    },
+    {
+      "id": 2,
+      "asunto": "CRUD en proceso",
+      "autor": "Martin",
+      "descripcion": "Backend del crud",
+      "fecha": "2023-06-06T05:00:00.000Z",
+      "estado": "04-enProceso"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+
+
+<mat-card class="card-p">
+  <mat-card-header>
+    <mat-card-title class="title1">{{registros.asunto  | titlecase }}</mat-card-title>
+    <mat-card-subtitle>{{registros.autor | titlecase }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-content>
+    <p class="mt-2 text">
+       {{registros.descripcion}}
+
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <div>
+      <mat-chip>
+        <div class="flex align-items-center justify-content-center">
+          <mat-icon class="mr-1">calendar_month</mat-icon>
+          {{registros.fechaInicio | date }}
+        </div>
+      </mat-chip>
+
+
+      <!-- <mat-chip>
+        <div class="flex align-items-center justify-content-center">
+          <mat-icon class="mr-1">calendar_month</mat-icon>
+          {{registros.fechaFinal | date:'dd/mm/yy' }}
+        </div>
+      </mat-chip> -->
+
+
+
+      <mat-chip class="ml-2 mr-2 ">
+        <div class="flex align-items-center justify-content-center">
+          <mat-icon class="mr-1">dashboard</mat-icon>
+          {{registros.estado}}
+        </div>
+      </mat-chip>
+
+    </div>
+
+    <span class="spacer"></span>
+
+
+
+    <button
+    class="colorB"
+    mat-raised-button
+    [routerLink]="['/todo/edit',registros.id]">
+    <mat-icon >edit</mat-icon>
+    Editar</button>
+
+
+
+
+  </mat-card-actions>
+
+  <mat-card-footer>
+    <mat-progress-bar class="color" mode="query" value="2"></mat-progress-bar>
+  </mat-card-footer>
+
+
+</mat-card>

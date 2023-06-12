@@ -1,0 +1,33 @@
+
+<mat-card class="content">
+  <mat-card-header>
+    <mat-card-title class="title1" mat-dialog-title>¿Estas Seguro?</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content class="textArea" mat-dialog-content>
+    <p>Este proceso no es reversible, esta a punto de eliminar a la tarea con el Asunto: {{register.autor | titlecase }} </p>
+  </mat-card-content>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No thanks</button>
+    <!-- EK cdkFocusInitial asegura que el boton ok tenga el enfoque de forma predeterminada -->
+    <!-- cuando se abre el dialogo, lo que proporciona una forma conveniente para que los usuarios -->
+    <!-- confirmen su accion -->
+    <button class="colorB" mat-button (click)="onConfirm()" cdkFocusInitial >Ok</button>
+  </div>
+
+</mat-card>
+
+
+<!-- <h1 mat-dialog-title>¿Esta Seguro?</h1>
+<div mat-dialog-content>
+
+  <p>Este proceso no es reversible, esta a punto de eliminar a {{register.autor}} </p>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="onConfirm()" cdkFocusInitial color="primary" >Ok</button>
+</div>
+ -->
+

@@ -1,0 +1,87 @@
+<mat-sidenav-container fullscreen class="back">
+
+  <mat-sidenav #sidenav mode="push" [ngStyle]="{width: '250px'}" class="">
+
+    <mat-toolbar class="content">
+      <span class="font-title">Menu</span>
+      <span class="spacer"></span>
+      <!-- El metodo .toggle() => es un metodo propiamente de este componenete el cual nos permite  -->
+      <!-- Cerrar y abri el side nav y asi mismo con la toolbar -->
+      <button
+      mat-icon-button
+      (click)="sidenav.toggle()">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+
+    </mat-toolbar>
+
+
+    <mat-nav-list class="">
+
+      <mat-list-item
+      *ngFor="let item of sideBarItems"
+      [routerLink]="item.url"
+      (click)="sidenav.toggle()"
+      class="text"
+      >
+      <mat-icon matListItemIcon> {{item.icon}}</mat-icon>
+      {{item.label}}
+      </mat-list-item>
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-toolbar color=""  class="content">
+
+      <button
+      mat-icon-button
+      (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+      </button>
+
+      <div class="mx-auto">
+        <img class="img1" src="https://i.imgur.com/IExucMZ.png" alt="">
+      </div>
+
+
+
+
+
+
+  </mat-toolbar>
+
+
+
+
+  <div class="container p-3">
+    <!-- Aca mostramos o renderizamos los componentes hijos -->
+    <router-outlet></router-outlet>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</mat-sidenav-container>
